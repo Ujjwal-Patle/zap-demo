@@ -15,7 +15,5 @@ jobs:
       - name: Run ZAP Baseline Scan
         uses: zaproxy/action-baseline@v0.4.0
         with:
-          target: 'http://testphp.vulnweb.com'  # public vulnerable site for testing
-          fail_action: false  # prevents job failure even if vulnerabilities are found
-          rules_file: '.github/zap-rules.json'  # custom rules file for ZAP
-          options: '-config api.disablekey=true'  # disable API key for ZAP 
+          target: 'http://testphp.vulnweb.com'   # ✅ Public test site
+          fail_action: false                     # Don't fail pipeline on alerts
